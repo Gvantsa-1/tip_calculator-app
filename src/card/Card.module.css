@@ -1,0 +1,9 @@
+.cardContainer {
+background-color: #ffffff;
+width: 920px;
+height: 481px;
+border-radius: 25px;
+display: flex;
+margin: 0 auto;
+margin-top: 87px;
+}
