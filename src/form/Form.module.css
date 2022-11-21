@@ -1,0 +1,24 @@
+.billTitle{
+    margin-top: 13px;
+    text-align: start;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color:var(--text_color)
+}
+.selectTip, .NumPeople{
+    margin-top: 40px;
+    text-align: start;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color:var(--text_color)
+}
+
+.bill, .inputNumPeople{
+    width: 379px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: var(--light_cyan);
+    padding: 6px 19px;
+}
