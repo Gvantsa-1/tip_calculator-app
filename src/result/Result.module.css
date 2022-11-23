@@ -57,7 +57,11 @@ h3::after {
 
 }
 
-@media screen and (max-width: 450px) {
+.reset:hover {
+  background-color: var(--hover_reset);
+}
+
+@media screen and (max-width: 850px) {
   .resultWrapper {
     width: 327px;
     height: 257px;
@@ -86,8 +90,4 @@ h3::after {
     font-size: 20px;
     transition: all 1s linear;
   }
-}
-
-.reset:hover {
-  background-color: var(--hover_reset);
 }

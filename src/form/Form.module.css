@@ -1,28 +1,32 @@
-
-.billTitle{
+.billTitle {
     margin-top: 13px;
     text-align: start;
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 6px;
-    color:var(--text_color);
+    color: var(--text_color);
 }
-.selectTip, .NumPeople{
+
+.selectTip,
+.NumPeople {
     margin-top: 40px;
     text-align: start;
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 6px;
-    color:var(--text_color)
+    color: var(--text_color)
 }
-.bill{
-    background: url("../assets/icon-dollar.svg") no-repeat 14px;  
+
+.bill {
+    background: url("../assets/icon-dollar.svg") no-repeat 14px;
 }
-.inputNumPeople{
+
+.inputNumPeople {
     background: url(../assets/icon-person.svg) no-repeat 14px;
 }
 
-.bill, .inputNumPeople{
+.bill,
+.inputNumPeople {
     width: 379px;
     height: 48px;
     border-radius: 5px;
@@ -30,34 +34,40 @@
     background-color: var(--light_cyan);
     direction: RTL;
     font-size: 24px;
-   font-family: "Space Mono";
-   color: var(--very_dark_cyan);
-   cursor: pointer;
+    font-family: "Space Mono";
+    color: var(--very_dark_cyan);
+    cursor: pointer;
 }
 
-.labelContainer{
+.labelContainer {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    
-}
-.error{
-   font-weight: 700;
-   font-size: 16px;
-   color:var(--red_text);
 
 }
-@media screen and (max-width: 450px) {
-    .billTitle{
+
+.error {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--red_text);
+
+}
+
+@media screen and (max-width: 850px) {
+    .billTitle {
         margin-top: 32px;
         margin-bottom: 6px;
     }
-    .selectTip, .NumPeople{
+
+    .selectTip,
+    .NumPeople {
         margin-top: 40px;
         margin-bottom: 6px;
-      
+
     }
- .bill, .inputNumPeople{
+
+    .bill,
+    .inputNumPeople {
         width: 311px;
     }
-    }
+}
