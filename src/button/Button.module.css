@@ -1,0 +1,30 @@
+.tipContainer{
+    margin-top: 10px;
+    max-width: 387px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: start;
+    margin-bottom: -14px;
+}
+.tipAmount{
+    width: 117px;
+    height: 48px;
+    background-color:var(--very_dark_cyan);
+    margin-bottom: 16px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+}
+.tipCustom{
+   background-color: var(--light_cyan);
+    width: 117px;
+    height: 48px;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #547878;
+    cursor: pointer;
+}
