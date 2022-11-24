@@ -7,7 +7,6 @@
     color: var(--text_color);
 }
 
-.selectTip,
 .NumPeople {
     margin-top: 40px;
     text-align: start;
@@ -55,11 +54,10 @@
 
 @media screen and (max-width: 850px) {
     .billTitle {
-        margin-top: 32px;
+        margin-top: -22px;
         margin-bottom: 6px;
     }
 
-    .selectTip,
     .NumPeople {
         margin-top: 40px;
         margin-bottom: 6px;
@@ -69,5 +67,9 @@
     .bill,
     .inputNumPeople {
         width: 311px;
+    }
+
+    .inputNumPeople {
+        margin-bottom: 22px;
     }
 }

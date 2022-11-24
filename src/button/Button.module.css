@@ -1,30 +1,84 @@
-.tipContainer{
-    margin-top: 10px;
-    max-width: 387px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    justify-items: start;
-    margin-bottom: -14px;
+.tipContainer {
+  margin-top: 10px;
+  max-width: 387px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: start;
+  margin-bottom: -14px;
 }
-.tipAmount{
-    width: 117px;
-    height: 48px;
-    background-color:var(--very_dark_cyan);
-    margin-bottom: 16px;
+
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+
+.error {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--red_text);
+
+}
+
+
+.selectTip {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  text-align: start;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--text_color)
+}
+
+.tipAmount {
+  width: 117px;
+  height: 48px;
+  background-color: var(--very_dark_cyan);
+  margin-bottom: 16px;
   border-radius: 5px;
   color: #ffffff;
   font-weight: 700;
   font-size: 24px;
   cursor: pointer;
 }
-.tipCustom{
-   background-color: var(--light_cyan);
-    width: 117px;
-    height: 48px;
-    padding: 6px 14px;
-    border-radius: 5px;
-    font-size: 24px;
-    color: #547878;
-    cursor: pointer;
+
+.btnContainer {
+  margin-top: 10px;
+  max-width: 387px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: start;
+  margin-bottom: -14px;
+}
+
+.tipCustom {
+  background-color: var(--light_cyan);
+  width: 117px;
+  height: 48px;
+  padding: 6px 14px;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #547878;
+  cursor: pointer;
+  direction: rtl;
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .tipAmount {
+    width: 146px;
+  }
+
+  .tipCustom {
+    background-color: var(--light_cyan);
+    width: 146px;
+  }
+
+
+
+
 }
