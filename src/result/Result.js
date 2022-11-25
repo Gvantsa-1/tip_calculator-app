@@ -1,16 +1,10 @@
 import styles from "./Result.module.css";
+import { useState } from "react";
 
 export const Result = (props) => {
-  const {
-    resetColor,
-    setResetColor,
-    resultPerson,
-    resultTotal,
-    amount,
-    setAmount,
-    total,
-    setTotal,
-  } = props;
+  const [resetColor, setResetColor] = useState(false);
+
+  const { resultPerson, resultTotal } = props;
   const refreshPage = () => {
     window.location.reload();
     setResetColor(true);
@@ -20,9 +14,7 @@ export const Result = (props) => {
     <div className={styles.resultWrapper}>
       <div className={styles.tipResult}>
         <h3>Tip Amount</h3>
-        <div resultPerson={resultPerson} className={styles.resultTip}>
-          ${resultPerson}
-        </div>
+        <div className={styles.resultTip}>${resultPerson}</div>
       </div>
       <div className={styles.totalResult}>
         <h3>Total</h3>

@@ -1,5 +1,6 @@
 import styles from "./Button.module.css";
 import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 
 const buttons = [
   { id: 1, value: 5 },
@@ -10,32 +11,25 @@ const buttons = [
 ];
 
 export const Button = (props) => {
-  const {
-    value3,
-    handleInputChange3,
-    rate,
-    setRate,
-    btnColor,
-    setBtnColor,
-    borderColor,
-    setBorderColor,
-    setBorderColor3,
-    borderColor3,
-    resultPerson,
-    resultTotal,
-    amount,
-    setAmount,
-    total,
-    setTotal,
-  } = props;
+  const min2 = "";
+  const max2 = 100;
+  const [value3, setValue3] = useState("");
+  const [btnColor, setBtnColor] = useState(false);
+  const [borderColor3, setBorderColor3] = useState(false);
+
+  const handleInputChange3 = (event) => {
+    const value3 = Math.max(min2, Math.min(max2, Number(event.target.value)));
+    setValue3(value3);
+    setBorderColor3(true);
+  };
+
+  const { rate, setRate, amount, total } = props;
   function handleSubmit(btn) {
     setRate(btn.value);
     setBtnColor(btn.id);
     setBorderColor3(true);
   }
 
-  console.log(rate);
-  console.log(btnColor);
   return (
     <div>
       <div className={styles.labelContainer}>
@@ -59,19 +53,10 @@ export const Button = (props) => {
               value={btn}
               className={styles.tipAmount}
               rate={rate}
-              setrate={setRate}
-              btnColor={btnColor}
-              setBtnColor={setBtnColor}
-              borderColor={borderColor}
-              setBorderColor={setBorderColor}
-              resultPerson={resultPerson}
-              resultTotal={resultTotal}
               amount={amount}
-              setAmount={setAmount}
               total={total}
-              setTotal={setTotal}
             >
-              %{btn.value}
+              {btn.value}%
             </button>
           );
         })}
@@ -88,16 +73,8 @@ export const Button = (props) => {
           placeholder="Custom"
           value={value3}
           onChange={handleInputChange3}
-          borderColor={borderColor}
-          setBorderColor={setBorderColor}
-          borderColor3={borderColor3}
-          setBorderColor3={setBorderColor3}
-          resultPerson={resultPerson}
-          resultTotal={resultTotal}
           amount={amount}
-          setAmount={setAmount}
           total={total}
-          setTotal={setTotal}
         />
       </div>
     </div>

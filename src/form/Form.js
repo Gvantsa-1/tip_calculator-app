@@ -1,30 +1,28 @@
 import styles from "./Form.module.css";
 import { Button } from "../button/Button";
+import { useState } from "react";
 
 export const Form = (props) => {
-  const {
-    handleInputChange,
-    handleInputChange2,
-    handleInputChange3,
-    value,
-    value2,
-    value3,
-    rate,
-    setRate,
-    handlePercent,
-    btnColor,
-    setBtnColor,
-    borderColor,
-    setBorderColor,
-    setBorderColor2,
-    borderColor2,
-    setBorderColor3,
-    borderColor3,
-    amount,
-    setAmount,
-    total,
-    setTotal,
-  } = props;
+  const min = "";
+  const max = 999999;
+  const [borderColor, setBorderColor] = useState(false);
+  const [borderColor2, setBorderColor2] = useState(false);
+  const [value2, setValue2] = useState("");
+  const [value, setValue] = useState("");
+
+  const handleInputChange2 = (event) => {
+    const value2 = Math.max(min, Math.min(max, Number(event.target.value)));
+    setValue2(value2);
+    setBorderColor2(true);
+  };
+
+  const handleInputChange = (event) => {
+    const value = Math.max(min, Math.min(max, Number(event.target.value)));
+    setValue(value);
+    setBorderColor(true);
+  };
+
+  const { rate, amount, total } = props;
   return (
     <div className={styles.formContainer}>
       <div className={styles.labelContainer}>
@@ -44,25 +42,9 @@ export const Form = (props) => {
         className={styles.bill}
         value={value}
         placeholder="0"
-        borderColor={borderColor}
-        setBorderColor={setBorderColor}
       />
 
-      <Button
-        value3={value3}
-        handleInputChange3={handleInputChange3}
-        rate={rate}
-        setRate={setRate}
-        handlePercent={handlePercent}
-        btnColor={btnColor}
-        setBtnColor={setBtnColor}
-        borderColor3={borderColor3}
-        setBorderColor3={setBorderColor3}
-        amount={amount}
-        setAmount={setAmount}
-        total={total}
-        setTotal={setTotal}
-      />
+      <Button rate={rate} amount={amount} total={total} />
       <div className={styles.labelContainer}>
         <h2 className={styles.NumPeople}>Number of People</h2>
         {value2 < 1 ? <h2 className={styles.error}>Can’t be zero</h2> : null}
@@ -79,14 +61,6 @@ export const Form = (props) => {
         value={value2}
         className={styles.inputNumPeople}
         placeholder="0"
-        borderColor={borderColor}
-        setBorderColor={setBorderColor}
-        borderColor2={borderColor2}
-        setBorderColor2={setBorderColor2}
-        amount={amount}
-        setAmount={setAmount}
-        total={total}
-        setTotal={setTotal}
       />
     </div>
   );
