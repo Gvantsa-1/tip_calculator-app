@@ -55,6 +55,7 @@ h3::after {
   letter-spacing: 1px;
   cursor: pointer;
 
+
 }
 
 .reset:hover {
@@ -88,6 +89,5 @@ h3::after {
     margin-top: 30px;
     color: var(--very_dark_cyan);
     font-size: 20px;
-    transition: all 1s linear;
   }
 }

@@ -68,6 +68,11 @@
   text-align: center;
 }
 
+.tipAmount:focus {
+  background-color: var(--cyan);
+  color: var(--very_dark_cyan);
+}
+
 @media screen and (max-width: 850px) {
   .tipAmount {
     width: 146px;
