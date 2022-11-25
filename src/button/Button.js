@@ -16,6 +16,7 @@ export const Button = (props) => {
   const [value3, setValue3] = useState("");
   const [btnColor, setBtnColor] = useState(false);
   const [borderColor3, setBorderColor3] = useState(false);
+  const [rate, setRate] = useState(false);
 
   const handleInputChange3 = (event) => {
     const value3 = Math.max(min2, Math.min(max2, Number(event.target.value)));
@@ -23,13 +24,12 @@ export const Button = (props) => {
     setBorderColor3(true);
   };
 
-  const { rate, setRate, amount, total } = props;
+  const { amount, total } = props;
   function handleSubmit(btn) {
-    setRate(btn.value);
+    setRate(true);
     setBtnColor(btn.id);
     setBorderColor3(true);
   }
-
   return (
     <div>
       <div className={styles.labelContainer}>
@@ -38,7 +38,6 @@ export const Button = (props) => {
           <h2 className={styles.error}>Can’t be zero</h2>
         )}
       </div>
-
       <div className={styles.btnContainer}>
         {buttons.map((btn) => {
           return (
@@ -52,7 +51,6 @@ export const Button = (props) => {
               key={uuidv4()}
               value={btn}
               className={styles.tipAmount}
-              rate={rate}
               amount={amount}
               total={total}
             >

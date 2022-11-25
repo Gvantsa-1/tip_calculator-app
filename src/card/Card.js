@@ -3,10 +3,10 @@ import { Form } from "../form/Form";
 import { Result } from "../result/Result";
 
 export const Card = (props) => {
-  const { rate, amount, total } = props;
+  const { amount, total } = props;
   return (
     <div className={styles.cardContainer}>
-      <Form rate={rate} amount={amount} total={total} />
+      <Form amount={amount} total={total} />
 
       <Result />
     </div>
