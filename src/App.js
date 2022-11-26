@@ -7,13 +7,15 @@ function App() {
   const [amount, setAmount] = useState(0);
   const [total, setTotal] = useState(0);
 
-  function resultPerson() {
-    setAmount("j");
-  }
   return (
     <div className="App">
       <img src={icon} className="icon" />
-      <Card amount={amount} total={total} />
+      <Card
+        setTotal={setTotal}
+        amount={amount}
+        total={total}
+        setAmount={setAmount}
+      />
     </div>
   );
 }

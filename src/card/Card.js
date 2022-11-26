@@ -3,12 +3,21 @@ import { Form } from "../form/Form";
 import { Result } from "../result/Result";
 
 export const Card = (props) => {
-  const { amount, total } = props;
+  const { amount, total, setAmount, setTotal } = props;
   return (
     <div className={styles.cardContainer}>
-      <Form amount={amount} total={total} />
-
-      <Result />
+      <Form
+        setTotal={setTotal}
+        setAmount={setAmount}
+        amount={amount}
+        total={total}
+      />
+      <Result
+        setTotal={setTotal}
+        amount={amount}
+        setAmount={setAmount}
+        total={total}
+      />
     </div>
   );
 };
